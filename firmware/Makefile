@@ -22,3 +22,6 @@ ifeq ($(OS), Windows_NT)
 else
 	$(MAKE) -f Makefile.linux distclean
 endif
+
+program:
+	$(MAKE) -f Makefile.linux program

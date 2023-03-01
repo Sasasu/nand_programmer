@@ -7,11 +7,13 @@
 #include <usb_lib.h>
 #include <usb_pwr.h>
 
+#include <stdio.h>
+
 void usb_init()
 {
     Set_System();
     Set_USBClock();
     USB_Interrupts_Config();
     USB_Init();
-    while (!USB_IsDeviceConfigured());
+    while (!USB_IsDeviceConfigured()) {};
 }
